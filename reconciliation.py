@@ -53,7 +53,6 @@ def calculate_expected_pos(pos, trn):
     
     return pos
 
-def calculate_recon(pos_expected, pos_observed):
     
 
 

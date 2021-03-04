@@ -70,11 +70,22 @@ def calculate_recon(pos_expected, pos_observed):
 
 def write_recon_file(recon_fails, filename='recon_out.txt'):
     
+
     file_path = './data/' + filename
+    open(file_path, 'w').close()
     with open(file_path, 'w') as outfile:
         for symbol in recon_fails:
             outfile.write(symbol + ' ' + str(recon_fails[symbol]))
             outfile.write('\n')
+
+if __name__ == "__main__":
+    
+    fin_data = process_fin_data('test_input.txt')
+    pos_exp = calculate_expected_pos(fin_data['D0-POS'], fin_data['D1-TRN'])
+    failed_recon = calculate_recon(pos_exp, fin_data['D1-POS'])
+    write_recon_file(failed_recon)
+
+    
         
         
 

@@ -67,6 +67,15 @@ def calculate_recon(pos_expected, pos_observed):
             recon_fails.pop(symbol)
 
     return recon_fails                
+
+def write_recon_file(recon_fails, filename='recon_out.txt'):
+    
+    file_path = './data/' + filename
+    with open(file_path, 'w') as outfile:
+        for symbol in recon_fails:
+            outfile.write(symbol + ' ' + str(recon_fails[symbol]))
+            outfile.write('\n')
+        
         
 
         

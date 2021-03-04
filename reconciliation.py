@@ -53,7 +53,20 @@ def calculate_expected_pos(pos, trn):
     
     return pos
 
+def calculate_recon(pos_expected, pos_observed):
+    
+    recon_fails = pos_observed.copy()
 
+    for symbol in pos_expected:
+        if symbol not in pos_observed:
+            recon_fails[symbol] = 0 - pos_expected[symbol]
+        else:    
+            recon_fails[symbol] -= pos_expected[symbol]
+        
+        if recon_fails[symbol] == 0:
+            recon_fails.pop(symbol)
 
+    return recon_fails                
+        
 
         

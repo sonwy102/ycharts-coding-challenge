@@ -14,11 +14,12 @@ Clone repo to your dev environment:
 
 `$ git clone https://github.com/sonwy102/ycharts-coding-challenge.git`
 
-Run python script (make sure you have Python 3+ installed in your dev environment!)
+Run python script (make sure you have Python3 installed in your dev environment!):
 
 `$ python3 reconciliation.py`
 
 Then, access the recon.out file (`recon_out.txt`) inside the `/data` directory
+to see the output data.
 
 ## Notes/Discussion
 ### Use of Python Libraries

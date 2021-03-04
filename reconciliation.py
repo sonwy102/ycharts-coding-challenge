@@ -53,7 +53,7 @@ def calculate_expected_pos(pos, trn):
     
     return pos
 
-    
+
 
 
         
